@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import './App.css';
 import { scrollAnimation } from './scrollAnimation';
+<img src="/shirt.png" alt="Shirt" id="animated-shirt" />
+
 
 
 function App() {
