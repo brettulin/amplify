@@ -13,7 +13,7 @@ function App() {
       {/* Header section */}
       <header>
         <div className="logo">My Clothing Co.</div>
-        <nav>
+        <nav className="subheader">
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#shop">Shop</a></li>
@@ -59,4 +59,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
