@@ -2,8 +2,6 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { scrollAnimation } from './scrollAnimation';
 
-
-
 function App() {
   useEffect(() => {
     window.addEventListener('scroll', scrollAnimation);
@@ -32,7 +30,7 @@ function App() {
           <p>Discover our collection.</p>
         </div>
         <div className="scroll-animation">
-          <img src="shirt.png" alt="Shirt" id="animated-shirt" />
+          <img src="/shirt.png" alt="Shirt" id="animated-shirt" />
         </div>
       </section>
 
@@ -61,6 +59,4 @@ function App() {
     </div>
   );
 }
-
-
 export default App;
