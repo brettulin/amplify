@@ -5,13 +5,14 @@ html, body {
   background-color: #000; /* Dark mode background */
   color: #fff; /* White text */
   font-family: 'Arial', sans-serif;
-  min-height: 100vh;
+  height: 100%; /* Ensure full height */
 }
 
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh; /* Ensure full height */
 }
 
 /* Header */
@@ -66,4 +67,54 @@ header {
 
 .subheader ul li a:hover {
   color: #a5b79b; /* Sage Green hover effect */
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+  background-color: #111; /* Slightly lighter black for contrast */
+  width: 100%; /* Take up the full width */
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  color: #a5b79b; /* Sage Green heading */
+}
+
+.hero-content p {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+/* Scroll Animation */
+.scroll-animation img {
+  max-width: 300px; /* Control the size of the image */
+  opacity: 0;
+  transform: translateY(50px); /* Initial state for animation */
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Sections */
+.section {
+  width: 100%; /* Make sure all sections take up full width */
+}
+
+.section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #a5b79b;
+}
+
+footer {
+  padding: 40px 0;
+  background-color: #111;
+  text-align: center;
+  color: #a5b79b;
+  width: 100%;
 }
