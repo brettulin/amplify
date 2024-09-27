@@ -16,6 +16,25 @@ html, body {
 }
 
 /* Header */
+.header {
+  display: flex;
+  flex-direction: column; /* Change to column to stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Adjust the max-width as needed */
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #111;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better separation */
+  transition: top 0.3s; /* Smooth transition for hiding/showing */
+transition: top 0.3s; /* Smooth transition for hiding/showing */
+}
+
+/* Header */
 header {
   display: flex;
   flex-direction: column; /* Change to column to stack elements vertically */

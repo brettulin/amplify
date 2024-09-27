@@ -5,13 +5,32 @@ import { scrollAnimation } from './scrollAnimation';
 function App() {
   useEffect(() => {
     window.addEventListener('scroll', scrollAnimation);
-    return () => window.removeEventListener('scroll', scrollAnimation);
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop) {
+        // Scroll down
+        header.style.top = '-100px'; // Adjust as needed
+      } else {
+        // Scroll up
+        header.style.top = '0';
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', scrollAnimation);
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
     <div className="App">
       {/* Header section */}
-      <header>
+      <header className="header">
         <div className="logo">My Clothing Co.</div>
         <nav className="subheader">
           <ul>
@@ -30,7 +49,7 @@ function App() {
           <p>Discover our collection.</p>
         </div>
         <div className="scroll-animation">
-          <img src="/shirt.png" alt="Shirt" id="animated-shirt" />
+          <img src="/shirt.PNG" alt="Shirt" id="animated-shirt" />
         </div>
       </section>
 
