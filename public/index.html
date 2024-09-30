@@ -1,68 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Premium Clothing. Redefined." />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Brand - Clothing</title>
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>My Clothing Co.</title>
-    <link rel="stylesheet" href="%PUBLIC_URL%/index.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <!-- The React app will be mounted here -->
 
-    <!-- Header -->
-    <header class="header">
-      <div class="logo">My Clothing Co.</div>
-      <nav class="subheader">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#shop">Shop</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+      <!-- Header -->
+      <header id="header">
+        <div class="logo">Your Brand</div>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#store">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-content">
-        <h1>Premium Clothing. Redefined.</h1>
-        <p>Discover our collection.</p>
-      </div>
-      <div class="scroll-animation">
-        <img src="%PUBLIC_URL%/shirt.PNG" alt="Shirt" id="animated-shirt" />
-      </div>
-    </section>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <img src="shirt.jpg" alt="Flagship Shirt" class="hero-image">
+      </section>
 
-    <!-- Shop Section -->
-    <section id="shop" class="section">
-      <h2>Our Collection</h2>
-      <p>Explore the best fabrics, quality, and styles.</p>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-      <h2>About Us</h2>
-      <p>Crafting premium quality clothing since 2024.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-      <h2>Contact Us</h2>
-      <p>Have any questions? Get in touch with us.</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2024 My Clothing Co. All rights reserved.</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="%PUBLIC_URL%/index.js"></script>
+      <!-- Store Section -->
+      <section id="store" class="store">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+          <!-- Example product -->
+          <div class="product">
+            <img src="product1.jpg" alt="Product 1">
+            <h3>Product Name</h3>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
