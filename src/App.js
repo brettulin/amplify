@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       {/* Header */}
       <header id="header">
-        <div className="logo">Your Brand</div>
+        <div className="logo">Jesus saves.</div>
         <nav>
           <ul>
             <li><a href="#home">Home</a></li>

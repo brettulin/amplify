@@ -29,7 +29,7 @@ header {
 
 .logo {
   font-size: 24px;
-  color: #738678; /* Sage color for brand logo */
+  color: #78866b; /* Sage color for brand logo */
 }
 
 nav ul {
@@ -46,7 +46,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #738678;
+  color: #78866b;
 }
 
 /* Hero Section */
@@ -71,7 +71,7 @@ nav ul li a:hover {
 }
 
 .store h2 {
-  color: #738678;
+  color: #78866b;
   margin-bottom: 40px;
 }
 
@@ -100,7 +100,7 @@ nav ul li a:hover {
 }
 
 .product p {
-  color: #738678;
+  color: #78866b;
 }
 
 /* Media Queries */
