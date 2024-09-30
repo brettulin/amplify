@@ -59,11 +59,11 @@ nav ul li a:hover {
 }
 
 .hero-image {
-  width: 50%;
-  max-width: 50%;
-  max-height: 60vh;
+  width: 60%;
+  max-width: 60%;
+  max-height: 80vh;
   height: auto;
-  object-fit: cover; /* Ensure the image covers the container */
+  object-fit: contain; /* Ensure the entire image is visible */
   margin-top: 10px; /* Add some margin to avoid being cut off */
 }
 
