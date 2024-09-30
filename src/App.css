@@ -64,7 +64,7 @@ nav ul li a:hover {
   max-height: 60vh;
   height: auto;
   object-fit: cover; /* Ensure the image covers the container */
-  margin-top: 40px; /* Add some margin to avoid being cut off */
+  margin-top: 10px; /* Add some margin to avoid being cut off */
 }
 
 /* Store Section */
