@@ -59,8 +59,11 @@ nav ul li a:hover {
 }
 
 .hero-image {
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
+  height: auto;
+  object-fit: contain; /* Ensure the image is fully visible */
+  margin-top: 20px; /* Add some margin to avoid being cut off */
 }
 
 /* Store Section */
