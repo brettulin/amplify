@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './App.css';  // Importing CSS for styles
 import ScrollAnimation from './scrollAnimation';  // Scroll animation function for sticky header
-import ShirtImage from '../public/shirt.png';  // Use your image for the shirt
+import ShirtImage from './shirt.png';  // Updated import path
 
 function App() {
   useEffect(() => {
