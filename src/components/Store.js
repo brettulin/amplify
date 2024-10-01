@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ShirtImage from './shirt.png';  // Updated import path
+import ShirtImage from '../shirt.png';  // Corrected import path
 
 const products = [
   { id: 1, name: 'Product Name 1', price: '$12.99', image: ShirtImage },
