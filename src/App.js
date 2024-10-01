@@ -4,6 +4,7 @@ import './App.css';  // Importing CSS for styles
 import ScrollAnimation from './scrollAnimation';  // Scroll animation function for sticky header
 import ShirtImage from './shirt.png';  // Updated import path
 import ProductDetail from './components/ProductDetail';  // Corrected import path
+import Store from './components/Store';  // Importing Store component
 
 function App() {
   useEffect(() => {
@@ -26,53 +27,15 @@ function App() {
           </nav>
         </header>
 
-        {/* Hero Section */}
-        <section className="hero" id="home">
-          <img src={ShirtImage} alt="Flagship Shirt" className="hero-image" />
-        </section>
-
-        {/* Store Section */}
-        <section id="store" className="store">
-          <h2>Our Products</h2>
-          <div className="product-grid">
-            {/* Example product */}
-            <div className="product">
-              <Link to="/product/1">
-                <img src={ShirtImage} alt="Product 1" />
-                <h3>Product Name 1</h3>
-                <p>$12.99</p>
-              </Link>
-            </div>
-            {/* Additional products */}
-            <div className="product">
-              <Link to="/product/2">
-                <img src={ShirtImage} alt="Product 2" />
-                <h3>Product Name 2</h3>
-                <p>$12.99</p>
-              </Link>
-            </div>
-            <div className="product">
-              <Link to="/product/3">
-                <img src={ShirtImage} alt="Product 3" />
-                <h3>Product Name 3</h3>
-                <p>$12.99</p>
-              </Link>
-            </div>
-            <div className="product">
-              <Link to="/product/4">
-                <img src={ShirtImage} alt="Product 4" />
-                <h3>Product Name 4</h3>
-                <p>$12.99</p>
-              </Link>
-            </div>
-            {/* Add more products similarly */}
-          </div>
-        </section>
-
         {/* Routes */}
         <Routes>
+          {/* Render Home component at root */}
           <Route path="/" element={<Home />} />
+
+          {/* Render Store component on /store route */}
           <Route path="/store" element={<Store />} />
+
+          {/* Render ProductDetail component dynamically on /product/:productId route */}
           <Route path="/product/:productId" element={<ProductDetail />} />
         </Routes>
       </div>
@@ -83,48 +46,8 @@ function App() {
 function Home() {
   return (
     <section className="hero" id="home">
-      <img src={ShirtImage} alt="Flagship Shirt" className="hero-image" />
-    </section>
-  );
-}
-
-function Store() {
-  return (
-    <section id="store" className="store">
-      <h2>Our Products</h2>
-      <div className="product-grid">
-        {/* Example product */}
-        <div className="product">
-          <Link to="/product/1">
-            <img src={ShirtImage} alt="Product 1" />
-            <h3>Product Name 1</h3>
-            <p>$12.99</p>
-          </Link>
-        </div>
-        {/* Additional products */}
-        <div className="product">
-          <Link to="/product/2">
-            <img src={ShirtImage} alt="Product 2" />
-            <h3>Product Name 2</h3>
-            <p>$12.99</p>
-          </Link>
-        </div>
-        <div className="product">
-          <Link to="/product/3">
-            <img src={ShirtImage} alt="Product 3" />
-            <h3>Product Name 3</h3>
-            <p>$12.99</p>
-          </Link>
-        </div>
-        <div className="product">
-          <Link to="/product/4">
-            <img src={ShirtImage} alt="Product 4" />
-            <h3>Product Name 4</h3>
-            <p>$12.99</p>
-          </Link>
-        </div>
-        {/* Add more products similarly */}
-      </div>
+      <h1>Welcome to Jesus Saves Clothing</h1>
+      <p>Check out our collection by visiting the <Link to="/store">Shop</Link></p>
     </section>
   );
 }
