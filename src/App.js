@@ -48,6 +48,7 @@ function Home() {
     <section className="hero" id="home">
       <h1>Welcome to Jesus Saves Clothing</h1>
       <p>Check out our collection by visiting the <Link to="/store">Shop</Link></p>
+      <img src={ShirtImage} alt="Flagship Shirt" className="hero-image" />
     </section>
   );
 }
