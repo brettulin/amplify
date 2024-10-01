@@ -78,6 +78,33 @@ nav ul li a:hover {
   color: #78866b;
   margin-bottom: 40px;
 }
+.product-detail {
+  padding: 40px;
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  text-align: center;
+}
+
+.product-detail img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.product-detail h2 {
+  color: #738678;
+}
+
+.product-options ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.product-options ul li {
+  margin: 5px 0;
+}
 
 .product-grid {
   display: grid;
