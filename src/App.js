@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';  // Importing CSS for styles
 import ScrollAnimation from './scrollAnimation';  // Scroll animation function for sticky header
 import ShirtImage from './shirt.png';  // Updated import path
-import ProductDetail from './ProductDetail';  // Importing ProductDetail component
+import ProductDetail from './components/ProductDetail';  // Corrected import path
 
 function App() {
   useEffect(() => {

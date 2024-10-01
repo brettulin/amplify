@@ -1,19 +1,18 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import './App.css';  // Importing CSS for styles
-import ShirtImage from './shirt.png';  // Updated import path
+import '../App.css';  // Corrected import path for CSS
+import ShirtImage from '../shirt.png';  // Corrected import path for image
 
 const products = [
     { id: 1, name: 'Product Name 1', price: '$12.99', description: 'A great product.', image: ShirtImage },
     { id: 2, name: 'Product Name 2', price: '$12.99', description: 'Another great product.', image: ShirtImage },
     { id: 3, name: 'Product Name 3', price: '$12.99', description: 'Yet another great product.', image: ShirtImage },
     { id: 4, name: 'Product Name 4', price: '$12.99', description: 'Best product ever.', image: ShirtImage },
-  ];
+];
 
-  function ProductDetail() {
+function ProductDetail() {
     const { productId } = useParams();
     const product = products.find(p => p.id === parseInt(productId));
-  
 
     if (!product) {
         return <div>Product not found</div>;
