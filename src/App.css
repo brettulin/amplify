@@ -52,13 +52,17 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
   text-align: center;
-  padding: 50px 20px;
+  padding: 100px 20px; /* Added padding to move content down */
 }
 
 .hero-image {
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
+}
+
+.hero-content {
+  margin-top: 20px; /* Additional margin if needed */
 }
 
 /* Store Section */
@@ -72,11 +76,9 @@ nav ul li a:hover {
   color: #78866b;
   margin-bottom: 40px;
 }
+
 .product-detail {
   padding: 40px;
-  background-color: #2a2a2a;
-  color: #f0f0f0;
-  text-align: center;
 }
 
 .product-detail img {

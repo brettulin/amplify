@@ -1,7 +1,8 @@
 let lastScrollTop = 0;
-const header = document.getElementById('header');
 
 function ScrollAnimation() {
+  const header = document.getElementById('header'); // Move inside the function to ensure it's defined
+
   window.addEventListener('scroll', function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop) {
