@@ -22,14 +22,39 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000; /* Ensure it stays on top */
   transition: top 0.3s ease; /* Smooth transition for hiding and showing */
-  background-color: rgba(0, 0, 0, 0.9);
-}
+  z-index: 1000; /* Ensure the header is above other content */
+  background-color: rgba(0, 0, 0, 0.9); /* Background for the header */
+  padding: 20px;
+  display: flex; /* Use flexbox for positioning */
+  justify-content: space-between; /* Logo on the left, nav links on the right */
+  align-items: center; /* Center vertically */
 
 .logo {
-  font-size: 24px;
-  color: #ffffff; /* Ensuring the logo is readable */
+    font-size: 24px;
+    color: #ffffff; /* Ensuring the logo is readable */
+  }
+  /* Navigation Links */
+nav ul {
+  list-style: none; /* Remove default bullet points */
+  display: flex; /* Align links horizontally */
+  gap: 20px; /* Space between the links */
+}
+
+nav ul li {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #ffffff; /* White color for navigation links */
+  font-size: 16px;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav ul li a:hover {
+  color: #738678; /* Change color on hover (sage color) */
 }
 
 /* Keyframe for fade-in and slide-up animation */
