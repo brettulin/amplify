@@ -12,7 +12,7 @@ body {
   background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,122,88,1) 100%);
   background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,122,88,1) 100%);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,122,88,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#007a58",GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#007a58", GradientType=1);
   color: #f0f0f0; /* Light text for contrast */
   line-height: 1.6;
 }
@@ -33,14 +33,16 @@ header {
 
 .logo {
   font-size: 24px;
+  color: #ffffff; /* Ensuring the logo is readable */
 }
 
 /* Hero Section */
 .hero {
   position: relative;
   padding: 40px 20px;
-  background-color: #f5f5f5;
+  background-color: #1a1a1a; /* Dark background to ensure text contrast */
   text-align: center;
+  color: #ffffff; /* Make the text white */
 }
 
 .hero-content {
@@ -50,19 +52,14 @@ header {
 }
 
 .hero-content h1 {
-  font-size: 3rem; /* Increased font size */
-  font-weight: bold; /* Increased font weight */
-  display: flex;
-  justify-content: center;    /* Horizontal centering */
-  align-items: center;        /* Vertical centering */
-  height: 100vh;              /* Full viewport height */
-  text-align: center;
-  padding: 20px;              /* Some padding for smaller screens */
-  box-sizing: border-box;
+  font-size: 3rem; /* Keep the increased font size */
+  font-weight: bold; /* Keep the increased font weight */
+  margin-bottom: 20px; /* Added margin below the heading */
 }
 
 .hero-content p {
-  font-size: 1.5rem; /* Increased font size */
+  font-size: 1.5rem;
+  color: #dcdcdc; /* Use a lighter shade for the paragraph */
 }
 
 /* Product Grid */
@@ -71,14 +68,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  margin-top: 20px; /* Reduced margin to move the product grid up */
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .product-grid {
-    margin-top: 10px; /* Adjust margin for smaller screens */
-  }
+  margin-top: 20px; /* Keep product grid accessible */
 }
 
 .product {
@@ -98,10 +88,12 @@ header {
 .product h3 {
   margin: 10px 0;
   font-size: 1.2rem;
+  color: #ffffff; /* Make product titles readable */
 }
 
 .product p {
   font-size: 1rem;
+  color: #ffffff; /* Make product descriptions readable */
 }
 
 /* Hover Effect */
@@ -136,14 +128,6 @@ header {
 
 .product-detail {
   padding: 40px;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
 }
 
 /* Media Queries */
