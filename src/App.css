@@ -29,6 +29,7 @@ body {
   display: flex; /* Use flexbox for positioning */
   justify-content: space-between; /* Logo on the left, nav links on the right */
   align-items: center; /* Center vertically */
+}
 
 .logo {
     font-size: 24px;
