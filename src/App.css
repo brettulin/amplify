@@ -22,13 +22,9 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  transition: top 0.3s; /* Smooth transition for hiding/showing the header */
-  z-index: 1000; /* Ensure the header is above other content */
+  z-index: 1000; /* Ensure it stays on top */
+  transition: top 0.3s ease; /* Smooth transition for hiding and showing */
   background-color: rgba(0, 0, 0, 0.9);
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo {

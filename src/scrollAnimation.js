@@ -1,18 +1,20 @@
 let lastScrollTop = 0;
 
 function ScrollAnimation() {
-  const header = document.getElementById('header'); // Ensure header is defined
-  const headerHeight = header.offsetHeight; // Get the height of the header
-
+  const header = document.getElementById('header'); // Get header element
+  const headerHeight = header.offsetHeight; // Get the full height of the header
+  
   window.addEventListener('scroll', function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
     if (scrollTop > lastScrollTop) {
-      // Scroll Down - hide header
-      header.style.top = `-${headerHeight}px`;
+      // Scroll Down - completely hide header
+      header.style.top = `-${headerHeight + 10}px`; // Add extra 10px to ensure full hide
     } else {
-      // Scroll Up - show header
+      // Scroll Up - show header again
       header.style.top = '0';
     }
+
     lastScrollTop = scrollTop;
   });
 
