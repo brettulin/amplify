@@ -12,7 +12,7 @@ body {
   background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,122,88,1) 100%);
   background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,122,88,1) 100%);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,122,88,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024", endColorstr="#007a58", GradientType=1);
+  min-height: 100vh;  /* Ensures gradient covers full height */
   color: #f0f0f0; /* Light text for contrast */
   line-height: 1.6;
 }
@@ -40,26 +40,30 @@ header {
 .hero {
   position: relative;
   padding: 40px 20px;
-  background-color: #1a1a1a; /* Dark background to ensure text contrast */
+  background: transparent; /* Ensure background gradient shows */
   text-align: center;
-  color: #ffffff; /* Make the text white */
+  color: #ffffff; /* Ensuring text stands out */
+  height: 100vh;  /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-content {
-  position: relative;
   z-index: 1;
   margin-bottom: 40px;
 }
 
 .hero-content h1 {
-  font-size: 3rem; /* Keep the increased font size */
-  font-weight: bold; /* Keep the increased font weight */
-  margin-bottom: 20px; /* Added margin below the heading */
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .hero-content p {
   font-size: 1.5rem;
-  color: #dcdcdc; /* Use a lighter shade for the paragraph */
+  color: #dcdcdc;
 }
 
 /* Product Grid */
@@ -68,7 +72,26 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  margin-top: 20px; /* Keep product grid accessible */
+  margin-top: 100vh; /* Push products out of sight on larger screens */
+}
+
+/* Responsive Scrolling for Products */
+@media (max-width: 1024px) {
+  .product-grid {
+    margin-top: 80vh; /* Adjust product visibility for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    margin-top: 60vh; /* Adjust margin for smaller devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    margin-top: 40vh; /* Adjust margin for mobile devices */
+  }
 }
 
 .product {
@@ -88,30 +111,18 @@ header {
 .product h3 {
   margin: 10px 0;
   font-size: 1.2rem;
-  color: #ffffff; /* Make product titles readable */
+  color: #ffffff;
 }
 
 .product p {
   font-size: 1rem;
-  color: #ffffff; /* Make product descriptions readable */
+  color: #ffffff;
 }
 
 /* Hover Effect */
 .product:hover {
   transform: scale(1.05) translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Store Section */
@@ -130,7 +141,7 @@ header {
   padding: 40px;
 }
 
-/* Media Queries */
+/* Media Queries for Header */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
