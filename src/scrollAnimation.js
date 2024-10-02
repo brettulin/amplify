@@ -2,12 +2,13 @@ let lastScrollTop = 0;
 
 function ScrollAnimation() {
   const header = document.getElementById('header'); // Ensure header is defined
+  const headerHeight = header.offsetHeight; // Get the height of the header
 
   window.addEventListener('scroll', function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop) {
       // Scroll Down - hide header
-      header.style.top = '-80px';
+      header.style.top = `-${headerHeight}px`;
     } else {
       // Scroll Up - show header
       header.style.top = '0';

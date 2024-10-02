@@ -18,17 +18,17 @@ body {
 }
 
 /* Header */
-header {
+#header {
   position: fixed;
   top: 0;
   width: 100%;
+  transition: top 0.3s; /* Smooth transition for hiding/showing the header */
+  z-index: 1000; /* Ensure the header is above other content */
   background-color: rgba(0, 0, 0, 0.9);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
-  transition: top 0.3s;
 }
 
 .logo {
