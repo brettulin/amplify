@@ -15,6 +15,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#007a58",GradientType=1);
   color: #f0f0f0; /* Light text for contrast */
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Header */
@@ -43,7 +44,7 @@ header {
   align-items: center;
   text-align: center;
   height: 100vh;
-  padding: 100px 20px; /* Added padding to move content down */
+  padding: 100px 20px; /* Ensuring space for content */
 }
 
 .hero-content {
@@ -58,10 +59,12 @@ header {
   font-size: 3rem; /* Increased font size */
   font-weight: bold; /* Increased font weight */
   margin-bottom: 20px;
+  color: #f0f0f0;  /* Ensuring the text is visible */
 }
 
 .hero-content p {
   font-size: 1.5rem; /* Increased font size */
+  color: #dcdcdc; /* Lighter color for better visibility */
 }
 
 /* Product Grid */
@@ -73,10 +76,16 @@ header {
   margin-top: 150vh; /* Added margin to move the product grid down */
 }
 
-/* Media Queries */
+/* Responsive Scrolling for Products */
 @media (max-width: 768px) {
   .product-grid {
     margin-top: 100vh; /* Adjust margin for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    margin-top: 50vh; /* Even smaller margin for very small screens */
   }
 }
 
