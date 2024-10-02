@@ -15,7 +15,6 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#007a58",GradientType=1);
   color: #f0f0f0; /* Light text for contrast */
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 /* Header */
@@ -44,7 +43,7 @@ header {
   align-items: center;
   text-align: center;
   height: 100vh;
-  padding: 100px 20px; /* Ensuring space for content */
+  padding: 100px 20px; /* Added padding to move content down */
 }
 
 .hero-content {
@@ -58,13 +57,17 @@ header {
 .hero-content h1 {
   font-size: 3rem; /* Increased font size */
   font-weight: bold; /* Increased font weight */
-  margin-bottom: 20px;
-  color: #f0f0f0;  /* Ensuring the text is visible */
+  display: flex;
+  justify-content: center;    /* Horizontal centering */
+  align-items: center;        /* Vertical centering */
+  height: 100vh;              /* Full viewport height */
+  text-align: center;
+  padding: 20px;              /* Some padding for smaller screens */
+  box-sizing: border-box;
 }
 
 .hero-content p {
   font-size: 1.5rem; /* Increased font size */
-  color: #dcdcdc; /* Lighter color for better visibility */
 }
 
 /* Product Grid */
@@ -76,16 +79,10 @@ header {
   margin-top: 150vh; /* Added margin to move the product grid down */
 }
 
-/* Responsive Scrolling for Products */
+/* Media Queries */
 @media (max-width: 768px) {
   .product-grid {
     margin-top: 100vh; /* Adjust margin for smaller screens */
-  }
-}
-
-@media (max-width: 480px) {
-  .product-grid {
-    margin-top: 50vh; /* Even smaller margin for very small screens */
   }
 }
 
@@ -144,6 +141,14 @@ header {
 
 .product-detail {
   padding: 40px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 /* Media Queries */
