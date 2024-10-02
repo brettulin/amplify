@@ -71,13 +71,13 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  margin-top: 200vh; /* Added margin to move the product grid down */
+  margin-top: 20px; /* Reduced margin to move the product grid up */
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
   .product-grid {
-    margin-top: 100vh; /* Adjust margin for smaller screens */
+    margin-top: 10px; /* Adjust margin for smaller screens */
   }
 }
 
