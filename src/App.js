@@ -4,7 +4,7 @@ import './App.css';  // Importing CSS for styles
 import ScrollAnimation from './scrollAnimation';  // Scroll animation function for sticky header
 import ProductDetail from './components/ProductDetail';  // Corrected import path
 import Store from './components/Store';
-
+import ShirtImage from './shirt.png';  // Importing the shirt image
 function App() {
   useEffect(() => {
     ScrollAnimation();  // Initialize scroll animation when the component mounts
@@ -49,8 +49,27 @@ function Home() {
         <h1>Welcome to Jesus Saves Clothing</h1>
         <p>Check out our collection by visiting the <Link to="/store">Shop</Link></p>
       </div>
+      <div className="product-grid">
+        {products.map(product => (
+          <div className="product" key={product.id}>
+            <Link to={`/product/${product.id}`}>
+              <img src={product.image} alt={product.name} />
+              <h3>{product.name}</h3>
+              <p>{product.price}</p>
+            </Link>
+          </div>
+        ))}
+      </div>
     </section>
   );
+return (
+  <section className="hero" id="home">
+    <div className="hero-content">
+      <h1>Welcome to Jesus Saves Clothing</h1>
+      <p>Check out our collection by visiting the <Link to="/store">Shop</Link></p>
+    </div>
+  </section>
+);
 }
 
 export default App;
