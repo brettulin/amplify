@@ -56,6 +56,8 @@ function Home() {
         <h1>Welcome to Jesus Saves Clothing</h1>
         <p>Check out our collection by visiting the <Link to="/store">Shop</Link></p>
       </div>
+        
+        {/* Product Grid 
       <div className="product-grid">
         {products.map(product => (
           <div className="product" key={product.id}>
@@ -66,7 +68,7 @@ function Home() {
             </Link>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 }
