@@ -36,6 +36,18 @@ body {
   color: #ffffff; /* Ensuring the logo is readable */
 }
 
+/* Keyframe for fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0; /* Start with invisible content */
+    transform: translateY(20px); /* Move slightly down */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* End in normal position */
+  }
+}
+
 /* Hero Section */
 .hero {
   position: relative;
@@ -47,6 +59,8 @@ body {
   align-items: center;
 }
 
+
+/* Apply animation to hero content */
 .hero-content {
   position: relative;
   z-index: 1;
@@ -55,17 +69,22 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
   color: #ffffff; /* Text color */
+  opacity: 0; /* Start with invisible content */
+  animation: fadeInUp 1s ease-in-out forwards; /* Trigger animation */
 }
 
+/* Adjusting timing for hero title and paragraph separately */
 .hero-content h1 {
   font-size: 3rem; /* Increased font size */
   font-weight: bold; /* Increased font weight */
   margin: 0;
+  animation-delay: 0.3s; /* Slight delay for title */
 }
 
 .hero-content p {
   font-size: 1.5rem; /* Increased font size */
   margin: 10px 0 0;
+  animation-delay: 0.5s; /* Slight delay for paragraph */
 }
 
 /* Product Grid */
