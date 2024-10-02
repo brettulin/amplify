@@ -43,6 +43,13 @@ function App() {
 }
 
 function Home() {
+  const products = [
+    { id: 1, name: 'Product Name 1', price: '$12.99', image: ShirtImage },
+    { id: 2, name: 'Product Name 2', price: '$12.99', image: ShirtImage },
+    { id: 3, name: 'Product Name 3', price: '$12.99', image: ShirtImage },
+    { id: 4, name: 'Product Name 4', price: '$12.99', image: ShirtImage },
+  ];
+
   return (
     <section className="hero" id="home">
       <div className="hero-content">
@@ -62,14 +69,6 @@ function Home() {
       </div>
     </section>
   );
-return (
-  <section className="hero" id="home">
-    <div className="hero-content">
-      <h1>Welcome to Jesus Saves Clothing</h1>
-      <p>Check out our collection by visiting the <Link to="/store">Shop</Link></p>
-    </div>
-  </section>
-);
 }
 
 export default App;
