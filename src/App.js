@@ -2,9 +2,8 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';  // Importing CSS for styles
 import ScrollAnimation from './scrollAnimation';  // Scroll animation function for sticky header
-import ShirtImage from './shirt.png';  // Updated import path
 import ProductDetail from './components/ProductDetail';  // Corrected import path
-import Store from './components/Store';  // Importing Store component
+import Store from './components/Store';
 
 function App() {
   useEffect(() => {
@@ -46,9 +45,10 @@ function App() {
 function Home() {
   return (
     <section className="hero" id="home">
-      <img src={ShirtImage} alt="Flagship Shirt" className="hero-image" />
-      <h1>Welcome to Jesus Saves Clothing</h1>
-      <p>Check out our collection by visiting the <Link to="/store">Shop</Link></p>
+      <div className="hero-content">
+        <h1>Welcome to Jesus Saves Clothing</h1>
+        <p>Check out our collection by visiting the <Link to="/store">Shop</Link></p>
+      </div>
     </section>
   );
 }
