@@ -22,88 +22,64 @@ body {
   width: 100%;
   transition: top 0.3s ease; /* Smooth transition for hiding and showing */
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* White-themed background */
+  padding: 10px 20px; /* Reduced padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Helvetica Neue', sans-serif; /* Minimalistic font */
 }
 
 .logo {
-  font-size: 24px;
-  color: #ffffff;
+  font-size: 20px; /* Smaller font size */
+  font-weight: bold; /* Bold font */
+  color: #333; /* Darker color for contrast */
 }
 
-/* Navigation */
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  list-style: none;
+  gap: 15px; /* Reduced gap */
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
+  color: #333; /* Darker color for contrast */
+  font-size: 14px; /* Smaller font size */
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #738678;
+  color: #007a58; /* Hover color */
 }
 
 /* Hero Section */
 .hero {
-  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url('./shirt.png') no-repeat center center/cover;
+  text-align: center;
+  height: 100vh;
+  padding: 100px 20px; /* Added padding to move content down */
 }
 
 .hero-content {
-  text-align: center;
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   padding: 20px;
   border-radius: 10px;
-  color: #ffffff;
-  animation: fadeInUp 1s ease-in-out forwards;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Drop shadow */
+  animation: fadeIn 2s ease-in-out; /* Animation */
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 3rem; /* Increased font size */
+  font-weight: bold; /* Increased font weight */
   margin-bottom: 20px;
 }
 
 .hero-content p {
-  font-size: 1.5rem;
-  margin-bottom: 40px;
-}
-
-.cta-button {
-  background-color: #738678;
-  color: #fff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #5a6d5b;
-}
-
-/* Keyframe for fade-in and slide-up animation */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  font-size: 1.5rem; /* Increased font size */
 }
 
 /* Product Grid */
@@ -112,10 +88,16 @@ nav ul li a:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 50px;
+  margin-top: 150vh; /* Added margin to move the product grid down */
 }
 
-/* Product Card */
+/* Media Queries */
+@media (max-width: 768px) {
+  .product-grid {
+    margin-top: 100vh; /* Adjust margin for smaller screens */
+  }
+}
+
 .product {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
@@ -126,6 +108,7 @@ nav ul li a:hover {
 
 .product img {
   max-width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
@@ -138,9 +121,22 @@ nav ul li a:hover {
   font-size: 1rem;
 }
 
+/* Hover Effect */
 .product:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Store Section */
@@ -155,17 +151,19 @@ nav ul li a:hover {
   margin-bottom: 40px;
 }
 
+.product-detail {
+  padding: 40px;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     gap: 10px;
   }
-
   .hero-content h1 {
     font-size: 2rem;
   }
-
   .product-grid {
     flex-direction: column;
     gap: 20px;
