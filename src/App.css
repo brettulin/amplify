@@ -14,7 +14,7 @@ body {
   line-height: 1.6;
 }
 
-/* Navbar */
+/* Header */
 #header {
   position: fixed;
   top: 0;
@@ -24,12 +24,13 @@ body {
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
   align-items: center;
+  padding: 20px;
 }
 
+
 .navbar h1 {
-  font-size: 24px;
+  font-size: 14px;
   letter-spacing: 2px;
 }
 
@@ -45,7 +46,7 @@ body {
 .navigation a {
   color: #000;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .navigation a:hover {
