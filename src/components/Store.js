@@ -1,29 +1,34 @@
+// src/components/Store.js
 import React from 'react';
-import { Link } from 'react-router-dom';
-import ShirtImage from '../shirt.png';  // Corrected import path
+import ProductCard from './ProductCard';
+import { motion } from 'framer-motion';
 
+// Sample products data
 const products = [
-  { id: 1, name: 'Product Name 1', price: '$12.99', image: ShirtImage },
-  { id: 2, name: 'Product Name 2', price: '$12.99', image: ShirtImage },
-  { id: 3, name: 'Product Name 3', price: '$12.99', image: ShirtImage },
-  { id: 4, name: 'Product Name 4', price: '$12.99', image: ShirtImage },
+  { id: 1, name: 'Faith T-Shirt', price: '$25.00', image: 'https://images.unsplash.com/photo-1583394838336-acd977736f90?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjgwNzYxNTh8&ixlib=rb-4.0.3&q=85' },
+  { id: 2, name: 'Blessed Hoodie', price: '$45.00', image: 'https://images.unsplash.com/photo-1504274066651-8d31a536b11a?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjgwNzYxNTh8&ixlib=rb-4.0.3&q=85' },
+  { id: 3, name: 'Grace Cap', price: '$15.00', image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjgwNzYxNTh8&ixlib=rb-4.0.3&q=85' },
+  { id: 4, name: 'Salvation Jacket', price: '$85.00', image: 'https://images.unsplash.com/photo-1523381212-0d5a5d15316c?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjgwNzYxNTh8&ixlib=rb-4.0.3&q=85' },
+  // Add more products as needed
 ];
 
 function Store() {
   return (
     <section id="store" className="store">
       <h2>Our Products</h2>
-      <div className="product-grid">
+      <motion.div
+        className="product-grid"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1, transition: { staggerChildren: 0.2 } }
+        }}
+      >
         {products.map(product => (
-          <div className="product" key={product.id}>
-            <Link to={`/product/${product.id}`}>
-              <img src={product.image} alt={product.name} />
-              <h3>{product.name}</h3>
-              <p>{product.price}</p>
-            </Link>
-          </div>
+          <ProductCard key={product.id} product={product} />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
